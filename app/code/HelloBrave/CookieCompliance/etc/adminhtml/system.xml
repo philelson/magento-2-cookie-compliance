@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="hellobrave" translate="label" sortOrder="10">
+            <label>HelloBrave</label>
+        </tab>
+        <section id="hellobrave_cookiecompliance" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cookie Compliance</label>
+            <tab>hellobrave</tab>
+            <resource>HelloBrave_CookieCompliance::hellobrave_cookiecompliance</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable / disable the HelloBrave Cookie Compliance module.</comment>
+                </field>
+                <field id="message" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Message</label>
+                </field>
+                <field id="learn_message" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>More Information Link Text</label>
+                </field>
+                <field id="learn_link" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>More Information Link URL</label>
+                    <comment>The URL where the user will find more information regarding cookie usage. e.g: http://www.mymagentostore.com/privacy-policy</comment>
+                </field>
+                <field id="hide_message" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide Message Link Text</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

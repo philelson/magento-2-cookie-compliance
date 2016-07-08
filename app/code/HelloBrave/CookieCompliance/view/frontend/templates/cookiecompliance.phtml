@@ -1,0 +1,23 @@
+<?php $helper = $this->helper('HelloBrave\CookieCompliance\Helper\Data'); ?>
+<?php if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) { ?>
+    <div id="hb-cc-wrap">
+        <span><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/message'); ?> - <a href="<?php echo $helper->getConfig('hellobrave_cookiecompliance/general/learn_link'); ?>" id="hb-cc-ll"><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/learn_message'); ?></a> - <a href="#" id="hb-cc-hide"><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/hide_message'); ?></a></span>
+    </div>
+    <script type="text/javascript">
+        requirejs(['jquery','jquery.cookie'],function(jQuery){
+            (function($) {
+                // Show cookie bar
+                if ($.cookie('hellobrave_cookiecompliance') != "true") {
+                    $('#hb-cc-wrap').show();
+                }
+                // Handle hide button
+                $('#hb-cc-hide').click(function(event) {
+                    event.preventDefault();
+                    $('#hb-cc-wrap').hide();
+                    // SET COOKIE
+                    $.cookie('hellobrave_cookiecompliance', "true", { expires: 28, path: '/' });
+                })
+            })(jQuery);
+        });
+    </script>
+<?php } ?>
