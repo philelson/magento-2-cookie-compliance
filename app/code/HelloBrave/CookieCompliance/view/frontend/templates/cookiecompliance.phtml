@@ -1,5 +1,6 @@
 <?php $helper = $this->helper('HelloBrave\CookieCompliance\Helper\Data'); ?>
-<?php if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) { ?>
+<?php if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) {
+    ?>
     <div id="hb-cc-wrap">
         <span><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/message'); ?> - <a href="<?php echo $helper->getConfig('hellobrave_cookiecompliance/general/learn_link'); ?>" id="hb-cc-ll"><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/learn_message'); ?></a> - <a href="#" id="hb-cc-hide"><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/hide_message'); ?></a></span>
     </div>
@@ -20,4 +21,5 @@
             })(jQuery);
         });
     </script>
-<?php } ?>
+<?php
+} ?>

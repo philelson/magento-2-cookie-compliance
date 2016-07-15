@@ -1,2 +1,6 @@
-#hb-cc-wrap { padding: 10px 20px; text-align: center; background: url('../images/hb-cc-striped.png') #dedede; display: none; }
-#hb-cc-wrap > span {  }
+#hb-cc-wrap {
+    padding: 10px 20px;
+    text-align: center;
+    background: url('../images/hb-cc-striped.png') #dedede;
+    display: none;
+}
