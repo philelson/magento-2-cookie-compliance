@@ -8,7 +8,7 @@
             <label>Cookie Compliance</label>
             <tab>hellobrave</tab>
             <resource>HelloBrave_CookieCompliance::hellobrave_cookiecompliance</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
                 <label>General</label>
                 <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Module</label>
