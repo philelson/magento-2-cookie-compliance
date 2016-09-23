@@ -7,6 +7,8 @@
                 <learn_message>Learn more</learn_message>
                 <learn_link>/privacy-policy-cookie-restriction-mode</learn_link>
                 <hide_message>Hide this message</hide_message>
+                <link_separator> - </link_separator>
+                <custom_css></custom_css>
             </general>
         </hellobrave_cookiecompliance>
     </default>

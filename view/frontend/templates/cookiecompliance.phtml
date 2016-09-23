@@ -1,8 +1,15 @@
-<?php $helper = $this->helper('HelloBrave\CookieCompliance\Helper\Data'); ?>
-<?php if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) {
-    ?>
+<?php
+
+$helper = $this->helper('HelloBrave\CookieCompliance\Helper\Data');
+if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) {
+    $message = $helper->getConfig('hellobrave_cookiecompliance/general/message');
+    $link_separator = $helper->getConfig('hellobrave_cookiecompliance/general/link_separator');
+    $learn_link = $helper->getConfig('hellobrave_cookiecompliance/general/learn_link');
+    $learn_message = $helper->getConfig('hellobrave_cookiecompliance/general/learn_message');
+    $hide_message = $helper->getConfig('hellobrave_cookiecompliance/general/hide_message');
+    $custom_css = $helper->getConfig('hellobrave_cookiecompliance/general/custom_css'); ?>
     <div id="hb-cc-wrap">
-        <span><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/message'); ?> - <a href="<?php echo $helper->getConfig('hellobrave_cookiecompliance/general/learn_link'); ?>" id="hb-cc-ll"><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/learn_message'); ?></a> - <a href="#" id="hb-cc-hide"><?php echo $helper->getConfig('hellobrave_cookiecompliance/general/hide_message'); ?></a></span>
+        <span><?php echo $message; ?><?php echo $link_separator; ?><a href="<?php echo $learn_link; ?>" id="hb-cc-ll"><?php echo $learn_message; ?></a><?php echo $link_separator; ?><a href="#" id="hb-cc-hide"><?php echo $hide_message; ?></a></span>
     </div>
     <script type="text/javascript">
         requirejs(['jquery','jquery.cookie'],function(jQuery){
@@ -21,5 +28,11 @@
             })(jQuery);
         });
     </script>
+    <?php if (strlen($custom_css) > 0) { ?>
+    <style type="text/css">
+        <?php echo $custom_css; ?>
+    </style>
+    <?php } ?>
 <?php
+
 } ?>

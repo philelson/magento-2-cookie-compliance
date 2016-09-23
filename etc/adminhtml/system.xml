@@ -1,14 +1,11 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
     <system>
-        <tab id="hellobrave" translate="label" sortOrder="10">
-            <label>HelloBrave</label>
-        </tab>
         <section id="hellobrave_cookiecompliance" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Cookie Compliance</label>
             <tab>hellobrave</tab>
             <resource>HelloBrave_CookieCompliance::hellobrave_cookiecompliance</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable Module</label>
@@ -27,6 +24,14 @@
                 </field>
                 <field id="hide_message" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Hide Message Link Text</label>
+                </field>
+                <field id="link_separator" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Link Separator</label>
+                    <comment>A separator which is used to separate the text and links.</comment>
+                </field>
+                <field id="custom_css" translate="label" type="textarea" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom CSS (Advanced)</label>
+                    <comment>Add CSS to change the style of the notification bar.</comment>
                 </field>
             </group>
         </section>
