@@ -2,7 +2,7 @@
     "name": "hellobrave/cookiecompliance",
     "description": "Magento 2 extension to insert a EU compliant implied consent cookie notification bar",
     "type": "magento2-module",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
