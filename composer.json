@@ -2,7 +2,7 @@
     "name": "philelson/magento-2-cookie-compliance",
     "description": "Magento 2 extension to insert a EU compliant implied consent cookie notification bar",
     "type": "magento2-module",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
