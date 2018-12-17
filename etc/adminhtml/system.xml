@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="hellobrave" translate="label" sortOrder="99999">
+        <tab id="hellobrave" translate="label" sortOrder="10">
             <label>Hello Brave</label>
         </tab>
         <section id="hellobrave_cookiecompliance" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -40,4 +40,3 @@
         </section>
     </system>
 </config>
-
