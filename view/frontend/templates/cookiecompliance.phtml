@@ -11,9 +11,7 @@ if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) {
     $content = sprintf('<span>%s%s<a href="%s" id="hb-cc-ll">%s</a>%s<a href="#" id="hb-cc-hide">%s</a></span>', $message, $link_separator, $learn_link, $learn_message, $link_separator, $hide_message);
 
  ?>
-    <div id="hb-cc-wrap">
-        <span><?php echo $message; ?><?php echo $link_separator; ?><a href="<?php echo $learn_link; ?>" id="hb-cc-ll"><?php echo $learn_message; ?></a><?php echo $link_separator; ?><a href="#" id="hb-cc-hide"><?php echo $hide_message; ?></a></span>
-    </div>
+    <div id="hb-cc-wrap"></div>
     <script type="text/javascript">
         requirejs(['jquery','jquery.cookie'],function(jQuery){
             (function($) {
