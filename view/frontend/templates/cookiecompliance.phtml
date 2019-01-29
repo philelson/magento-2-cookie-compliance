@@ -7,21 +7,27 @@ if ($helper->getConfig('hellobrave_cookiecompliance/general/enabled')) {
     $learn_link = $helper->getConfig('hellobrave_cookiecompliance/general/learn_link');
     $learn_message = $helper->getConfig('hellobrave_cookiecompliance/general/learn_message');
     $hide_message = $helper->getConfig('hellobrave_cookiecompliance/general/hide_message');
-    $custom_css = $helper->getConfig('hellobrave_cookiecompliance/general/custom_css'); ?>
+    $custom_css = $helper->getConfig('hellobrave_cookiecompliance/general/custom_css');
+    $content = sprintf('<span>%s%s<a href="%s" id="hb-cc-ll">%s</a>%s<a href="#" id="hb-cc-hide">%s</a></span>', $message, $link_separator, $learn_link, $learn_message, $link_separator, $hide_message);
+
+ ?>
     <div id="hb-cc-wrap">
         <span><?php echo $message; ?><?php echo $link_separator; ?><a href="<?php echo $learn_link; ?>" id="hb-cc-ll"><?php echo $learn_message; ?></a><?php echo $link_separator; ?><a href="#" id="hb-cc-hide"><?php echo $hide_message; ?></a></span>
     </div>
     <script type="text/javascript">
         requirejs(['jquery','jquery.cookie'],function(jQuery){
             (function($) {
+                let container = $('#hb-cc-wrap');
                 // Show cookie bar
                 if ($.cookie('hellobrave_cookiecompliance') != "true") {
-                    $('#hb-cc-wrap').show();
+                    container.html('<?= $content; ?>');
+                    container.show();
                 }
                 // Handle hide button
                 $('#hb-cc-hide').click(function(event) {
                     event.preventDefault();
-                    $('#hb-cc-wrap').hide();
+                    container.hide();
+                    container.html();
                     // SET COOKIE
                     $.cookie('hellobrave_cookiecompliance', "true", { expires: 28, path: '/' });
                 })
