@@ -2,7 +2,7 @@
     "name": "philelson/magento-2-cookie-compliance",
     "description": "Magento 2 extension to insert a EU compliant implied consent cookie notification bar",
     "type": "magento2-module",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
@@ -14,6 +14,11 @@
         "name": "HelloBrave",
         "email": "dev@hellobrave.com",
         "homepage": "http://www.hellobrave.com/",
+        "role": "Developer"
+    },{
+        "name": "Pegasus Commerce",
+        "email": "it@pegasus-commerce.com",
+        "homepage": "http://pegasus-commerce.com/",
         "role": "Developer"
     }],
     "autoload": {

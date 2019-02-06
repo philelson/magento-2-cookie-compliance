@@ -4,7 +4,10 @@
         <css src="HelloBrave_CookieCompliance::css/hellobrave_cookiecompliance.css"/>
     </head>
     <body>
-        <referenceContainer name="after.body.start">
+        <!--<referenceContainer name="after.body.start">-->
+            <!--<block class="HelloBrave\CookieCompliance\Block\CookieCompliance" name="hellobrave_cookiecompliance" template="HelloBrave_CookieCompliance::cookiecompliance.phtml"/>-->
+        <!--</referenceContainer>-->
+        <referenceContainer name="before.body.end">
             <block class="HelloBrave\CookieCompliance\Block\CookieCompliance" name="hellobrave_cookiecompliance" template="HelloBrave_CookieCompliance::cookiecompliance.phtml"/>
         </referenceContainer>
     </body>
